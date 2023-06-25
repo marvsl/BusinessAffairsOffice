@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Nunito+Sans:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Raleway:wght@200;300;400;500;600&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    /* Navigation Theme */
+    --navbgcolor:#511104;
+    --navtextcolor:white;
+    --navtexthovercolor:black;
+    --navspancolor:yellow;
+    --navhoverbg:yellow;
+
+
+
+    /* Product Theme */
+    --btnbgcolor:#511104;
+    --btnbgcolorhover:yellow;
+    --btntxtcolor:white;
+    --btntxtcolorhover:black;
+    --box-shadowmaterial:rgb(0,0,0,0.25) 0px 54px 55px,rgba(0,0,0,0.12) 0px 4px 6px,rgba(0,0,0,0.17) 0px 12px 13px,rgba(0,0,0,0.09) 0px -3px 5px;
+    --btnborderradius:5px;
+
+
+    /* Footer theme*/
+    --footerbgcolor:#511104;
+    --footertextcolor:white;
+    --footerspancolor:yellow;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    color: var(--font-color);
+}
+p{
+    color: var(--font-color);
+
+} 
+
+body{
+    padding-top: 40px; 
+    font-family: 'Dosis', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+}
+
+/* Main header */
+.main-header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    padding:20px 9%;
+    top: 0;
+    right: 0;
+    align-items: center;
+    z-index: 99999;
+    background: var(--navbgcolor);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.title{
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.main-header img{
+    width: 30px;
+    height: 30px;
+}
+
+.main-header .ha{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.main-header h3{
+    margin-top: 2px;
+    font-weight: bold;
+    color: var(--navtextcolor);
+}
+
+.main-header span{
+    color: var(--navspancolor);
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-list li{
+    max-width: fit-content;
+    font-size: 14px;
+    margin-left: 30px;
+    transition: .5s;
+    padding: 5px;
+    color: var(--navtextcolor);
+}
+
+.nav-list li:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    /* margin-left: 30px; */
+    background: var(--navhoverbg);
+    border-radius: 5px;
+    
+    color: black;
+}
+
+
+
+
+
+
+/* PRODUCTS */
+.product{
+    padding: 60px 0px;
+}
+.product h1{
+    padding: 5px;
+    max-width: fit-content;
+    margin: auto;
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.products-list{
+    max-width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 5rem;
+
+}
+
+
+.products-list img{
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;  
+    box-shadow: var(--box-shadowmaterial);
+}
+
+
+
+
+
+
+
+
+.card{
+    cursor: pointer;
+    position: relative;
+}
+
+#main-button{
+    z-index: 999999999;
+    position: fixed;
+    color: maroon;
+    cursor: pointer;
+    bottom: 40px;
+    right: 2%;
+
+}
+
+.card:hover .bg{
+    transform: scale(1.1);
+    filter: blur(3px);
+    transition: .5s;
+}
+
+.des{
+    height: 100%;
+    /* background: red; */
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    position: absolute;
+    max-width: fit-content;
+    padding: 40px;
+    transition: .5s;
+    top: 0;
+}
+
+.des h3{
+    font-weight: 600;
+    
+}
+.des p{
+    line-height: 1.5em;
+    width: 100%;
+    margin: auto;
+    font-size:15px;
+}
+
+.card:hover .des{
+    border-radius: 10px;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* IGES */
+
+.ige{
+    margin: 150px 0px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    
+}
+.ige h1{
+    margin-bottom: -80px;
+}
+
+
+.ige-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadowmaterial);
+    /* background: yellow; */
+    margin: 150px auto;
+    padding: 50px;
+    
+}
+
+.ige-card img{
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: var(--box-shadowmaterial);
+    width: 150px;
+    height: 150px;
+    transition: .5s;
+    
+}
+
+.ige-card img:hover{
+    transform: scale(1.2);
+
+}
+.des-ige{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+
+.images{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+
+option{
+    cursor: pointer;
+    background: maroon;
+    color: white;
+}
+
+
+.main-buy{
+    width: 100%;
+    /* background: transparent; */
+    top:-700px;
+    left: 0;
+    margin: auto;
+    right: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.buy{
+    margin-bottom: 50px;
+    background: white;
+    position: relative;
+    width: 50%;
+    /* max-width: fit-content; */
+    /* height: 200px;
+    width: 10; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadowmaterial);
+    padding: 20px;
+    border-radius: 10px;
+}
+.title{
+    text-align: center;
+}
+
+
+.container{
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+
+    margin-top: 20px;
+    display: flex;
+    gap:1rem;
+}
+
+.container #Product{
+    height: 25px;
+    border: 1px solid maroon;
+    border-radius: 2px;
+    margin-left: 2px;
+    width: 100%;
+}
+
+.pricee{
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    gap:.6rem;
+}
+.pricee p{
+    height: 25px;
+    border-radius: 2px;
+    margin-left: 28px;
+    width: 100%;
+}
+
+.quantity{
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    gap:.6rem;
+}
+.quantity input{
+    height: 25px;
+    border: 1px solid maroon;
+    border-radius: 2px;
+    margin-left: 3px;
+    width: 100%;
+}
+
+.price{
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.name{
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    gap:.6rem;
+}
+.name input{
+    height: 25px;
+    border: 1px solid maroon;
+    border-radius: 2px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+
+.email{
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    gap:.6rem;
+}
+.email input{
+    height: 25px;
+    border: 1px solid maroon;
+    border-radius: 2px;
+    margin-left: 25px;
+    width: 96%;
+}
+
+
+
+.btn{
+    color: white;
+    background: maroon;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+.main-foot{
+    width: 100%;
+    background: var(--footerbgcolor);
+    color: var(--footertextcolor);
+    text-align: center;
+    padding: 20px 0px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+.main-foot h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.main-foot span{
+    color: var(--footerspancolor);
+}
+
+
+
+
+
+
+
+
+@media  screen and (max-width:800px) {
+
+    body{
+        padding-top: 90px;
+    }
+
+
+    .main-header .nav{
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-color: black;
+        width: 200px;
+        height: 100vh;
+        transition: 0.5s;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .main-header .nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 30px;
+    }
+
+    .main-header .ha{
+        transform: rotate(-0.25turn);
+        font-weight: bold;
+        margin-top: 10px;
+        cursor: pointer;
+        padding: 20px;
+        display: block;
+        color: rgb(246, 255, 0);
+        
+        
+    }
+
+    .ige-card{
+        width: 90%;
+    }
+
+    .images{
+        flex-wrap: wrap;
+    }
+
+    
+
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      rel="shortcut icon"
+      href="/images/image-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    
+
+  </head>
+  <body id="bod" >
+    <i class="fa-solid fa-cart-shopping fa-shake fa-2xl" id="main-button" onclick="opendialog()"></i>
+
+    <!-- Ordering Container -->
+    <div class="main-buy" id="ordering"> 
+      <div class="buy">
+          <h3 class="title">BAO ORDERING</h3>
+
+          <div class="name">
+            <label>Name</label>
+            <input type="text" name="number" id="name" required>
+        </div>
+
+        <div class="email">
+          <label>Email</label>
+          <input type="email" name="number" id="email" required>
+        </div>
+        
+      <div class="container">
+          <p>Product</p>
+          <select name="Product" id="Product" class="pro" onclick="copy()" onchange="total()">
+              <option value="295" id="p1">Citronella Essential Oil</option>
+              <option value="295" id="p2">Lemon Grass Essential Oil</option>
+              <option value="75" id="p3">Scented Candle Small Glass</option>
+              <option value="115" id="p4">Scented Candle Medium Glass</option>
+              <option value="140" id="p5">Valena Heritage Coffee 200g</option>
+              <option value="115" id="p6">Lemon Grass Hydrosol Spray</option>
+          </select>
+          <!-- <p id="test"></p> -->
+      </div>
+
+      <div class="pricee">
+        <label>Price</label>
+        <p id="pricee"></p>
+    </div>
+
+      <div class="quantity">
+          <label>Quantity</label>
+          <input type="number" name="number" id="number" onchange="total()" onkeyup="total()">
+      </div>
+      
+      <div class="price">
+          <p>Total Price</p>
+          <p id="result">0</p>
+      </div>
+      <input class="btn" type="submit" value="Submit" onclick="thankyou()">
+      <input class="btn" type="submit" value="Exit" onclick="closedialog()">
+  </div>
+</div>
+
+   <!-- <i class="fa-solid fa-cart-shopping fa-shake fa-2xl" id="main-button" onclick="opendialog()"></i>
+   <input type="button" value="Order"> -->
+
+
+   <!-- Main header -->
+   
+    <header class="main-header" id="main-header">
+      <div class="title">
+        <img src="./images/image-removebg-preview.png" class="titlelogo">
+        <h3>Business Affairs <span>Office</span></h3>
+    </div>
+      <div class="nav" id="nav_links">
+        <p class="ha" onclick="navclose()" id="close" style="font-weight:800;">X</p> 
+              
+      <ul class="nav-list">
+          <li><a href="index.html" id="home">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contacts.html">Contacts</a></li>     
+      </ul>
+      </div>
+      <p class="ha" onclick="navopen()" id="open" style="transform: rotate(-0.25turn);">
+      |||
+      </p>  
+  </header>
+
+   <!-- End of header -->
+
+     <!-- Product Section -->
+    <section class="product" id="products">
+      <h1>Products & Plans</h1>
+      <div class="products-list">
+        <div class="card">
+          <img src="./images/p1.jpg" class="bg" />
+          <div class="des">
+            <h3>Citronella Essential Oil</h3>
+            <br />
+            <p>
+              Citronella smells like fresh lemon and citrus, and is known by
+              many because of the oil available for tiki torches and candles to
+              help keep mosquitoes away.
+              <br>
+              
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./images/p2.jpg" class="bg" />
+          <div class="des">
+            <h3>Lemon Grass Essential Oil</h3>
+            <br />
+            <p>
+              Lemongrass essential oil smells like lemony citrus,as its name
+              would imply.The west indian variety has a grassy earth smell and
+              is fairy dark
+              
+              <!-- ,while the East variety is lighter in tone and has a
+              more green scent than its counterpart -->
+              <br>
+              
+            </p>
+           
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./images/p5.jpg" class="bg" />
+          <div class="des">
+            <h3>Scented Candle Small Glass</h3>
+            <br />
+            <p>
+              Lemon Grass Cented Candles helps to lessen anxiety and depression it helps to boost your mood and relieve stress.
+              <br>
+              
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./images/p6.jpg" class="bg" />
+          <div class="des">
+            <h3>Scented Candle Medium Jar</h3>
+            <br />
+            <p>
+              Lemon Grass Cented Candles helps to lessen anxiety and depression it helps to boost your mood and relieve stress.
+              <br>
+              
+            </p>
+            
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="./images/product2.jpg" class="bg" />
+
+          <div class="main-con">
+            <div class="des">
+              <h3>Valena Heritage Coffee</h3>
+              <br />
+              <p>
+                <!-- Valena Heritage Cofffee is the niche-based product of CSU Lallo Campus and supported by DOST. -->
+                 The aromatic coffee beans was named after the area within CSU Lallo where the half-century old coffee trees and other fruit bearing trees survive.
+                <br>
+                
+              </p>
+            </div>
+
+          </div>
+          
+        </div>
+
+        <div class="card">
+          <img src="./images/pro1.jpg" class="bg" />
+          <div class="des">
+            <h3>Lemon Grass Hydrosol Spray</h3>
+            <br />
+            <p>
+              Lemon Grass Hydrosol is an antibacterial in nature.Lemongrass keeps skin clean, while also inhibiting the growth of bacteria,making it great to fighting acne.
+
+
+              <!-- It also serves as a dissinfectant and also helps to repel mosquitoes. -->
+              <br>
+             
+            </p>
+            
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+    <!-- End of Product Section -->
+
+
+    <!-- Iges Section -->
+
+    <section class="ige" id="iges">
+      <h1>New IGE Plans For 2023</h1>
+      <div class="ige-list">
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>Squash plants while on their flowering stage Down: Harvested
+              squash while being sorted and packed.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/squash1.jpg" />
+            <img src="./images/squash2.jpg" />
+            <!-- <img src="/images/squash3.jpg" />
+            <img src="/images/squash4.jpg" /> -->
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                <!-- The business coordinator and other IGE Staff together with Isabela
+                Agri- Trading Center staff during the first and second loading of Squash
+                fruits bought by Isabela Agri. Trading Center. While on bottom is CEO
+                Antonio Cabalbag; Director Andy Catulin; -->BAO Coordinator Lauro Julian 
+                and Lighthouse Cooperative staff during the hauling of squash fruits
+                bought by Lighthouse Coop.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/agritrading1.jpg" />
+            <img src="./images/agritrading2.jpg" />
+            <!-- <img src="/images/agritrading3.jpg" /> -->
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                CSU Lal-lo corn Plants damaged by typhoon Florita last August 2022.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/corn1.jpg" />
+            <img src="./images/corn2.jpg" />
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                Sheep and Cattle stocks of the campus (Sheep and Cattle Project).
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/sheepcow1.jpg" />
+            <img src="./images/sheepcow2.jpg" />
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                IGE Staff while land preparing and planting using a 4-wheeled tractor
+                and a seeder with fertilizer applicator.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/land1.png" />
+            <img src="./images/land2.jpg" />
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                <!-- IGE Personnel’s while gathering citronella planting materials.
+                Bottom: Former Vice Mayor Expedito Taguibao of Enrile Cagayan, Mr. Romeo
+                Puyat of DOST and Prof. Lauro J. Julian during the hauling of 110,000 -->
+                Citronella planting materials for the establishment of Citronella
+                plantation at Sta. Maria Isabela.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/personel1.jpg" />
+            <img src="./images/personel2.jpg" />
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                IGP Personnel’s while loading and threshing corn.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/harvest1.jpg" />
+            <img src="./images/harvest2.jpg" />
+          </div>
+        </div>
+
+        <div class="ige-card">
+          <div class="des-ige">
+            <p>
+                IGP personnel’s while cleaning at the Cassava Plantation
+                <br />Down: Jaylord Sinco and Reynaldo Ubias IGP staff, poses with their
+                newly harvested string beans on a crate.
+            </p>
+          </div>
+          <div class="images">
+            <img src="./images/cassava1.jpg" />
+            <img src="./images/cassava2.jpg" />
+          </div>
+        </div>
+      </div>
+
+
+    <div class="ige-card">
+        <div class="des-ige">
+          <p>
+            Carabao and goats at the Carabeef and Goat Project of CSU at Lal-lo
+          </p>
+        </div>
+        <div class="images">
+          <img src="./images/carabaogoat1.jpg" />
+          <img src="./images/carabaogoat2.jpg" />
+        </div>
+      </div>
+    </div>
+
+
+  <div class="ige-card">
+    <div class="des-ige">
+      <p>
+        Native pigs at CSUL Native Swine Production Project (Free Range)
+      </p>
+    </div>
+    <div class="images">
+      <img src="./images/pig1.jpg" />
+      <img src="./images/pig2.jpg" />
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- End of Iges Section -->
+
+<footer class="main-foot" id="main-foots">
+  <h4>Business Affairs <span>Office</span> &copy 2022-2023</h4>
+
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

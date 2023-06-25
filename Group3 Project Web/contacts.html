@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="shortcut icon" href="/images/image-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="title">
+            <img src="./images/image-removebg-preview.png" class="titlelogo">
+            <h3>Business Affairs <span>Office</span></h3>
+        </div>
+        <div class="nav" id="nav_links">
+            <p class="ha" onclick="navclose()" id="close" style="font-weight:800;">X</p>            
+        <ul class="nav-list">
+            <li><a href="index.html" id="home">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contacts</a></li>     
+        </ul>
+        </div>
+        <p class="ha" onclick="navopen()" id="open" style="transform: rotate(-0.25turn);">
+        |||
+        </p>  
+    </header>
+
+
+    
+    <section class="contact" id="contacts">
+        <h3>Contact Us</h3>
+
+        <div class="container-contacts">
+            <div class="left">
+                <h3>Social Media</h3>
+                <div>
+                    <img src="./images/facebook.png" alt="fb">
+                    <a href="https://www.facebook.com/larry.julian.505/">Larry Julian</a>
+
+                </div>
+                
+                <div>
+                    <img src="./images/gmail.png" alt="fb">
+                    <a href="julianlauro12@gmail.com">julianlauro12@gmail.com</a>
+
+                </div>
+                
+                <div>
+                    <img src="./images/phone.png" alt="fb">
+                    <a href="0975-664-5989">0975-664-5989</a>
+
+
+                </div>
+                
+
+                <!-- <div>
+                <img src="./images/whatsapp.png" alt="fb">
+                <a href="www.geasasd">www.facebook.com</a>
+                </div> -->
+                
+
+            </div>
+
+            <div class="right">
+                <h3>Send Us Message</h3>
+
+                <div class="input-box">
+                    <span>Name:</span>
+                    <input id="name" type="text" placeholder="Name" >
+                    
+                </div>
+
+                <div class="input-box">
+                    <span>Email:</span>
+                    <input id="gmail" type="text" placeholder="@gmail" >
+                    
+                </div>
+
+                <div class="input-box">
+                    <span>Phone#</span>
+                    <input id="num" type="text" placeholder="+09" >
+                    
+                </div>
+
+                
+                    <textarea id="message" name=""  cols="30" rows="10" placeholder="Your message here"></textarea >
+
+                    <input onclick="validation()" class="btn" type="submit" value="submit" >
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="main-foot" id="main-foots">
+        <h4>Business Affairs <span>Office</span> &copy 2022-2023</h4>
+
+    </footer>
+
+        <script src="script.js">        
+        </script>
+</body>
+</html>
